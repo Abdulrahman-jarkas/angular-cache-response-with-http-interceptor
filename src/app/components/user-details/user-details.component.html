@@ -1,0 +1,15 @@
+<mat-card class="user-card" *ngIf="user$ | async as user">
+  <mat-card-header>
+    <img [src]="user?.avatar" mat-card-avatar class="user-header-image" />
+    <mat-card-title
+      >{{ user?.first_name }} {{ user?.last_name }}</mat-card-title
+    >
+    <mat-card-subtitle>{{ user?.email }}</mat-card-subtitle>
+  </mat-card-header>
+
+  <mat-card-content>
+    <button routerLink="../" mat-raised-button color="primary">
+      Back To List
+    </button>
+  </mat-card-content>
+</mat-card>

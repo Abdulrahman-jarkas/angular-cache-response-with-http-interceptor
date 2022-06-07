@@ -1,0 +1,8 @@
+<mat-toolbar color="primary">
+  <span routerLink="../">Users Management</span>
+</mat-toolbar>
+<mat-progress-bar
+  color="accent"
+  mode="indeterminate"
+  *ngIf="loaderService.isLoading$ | async"
+></mat-progress-bar>
